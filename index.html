@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engagement Memories | ISHAN Stream</title>
+    <style>
+        :root {
+            --bg: #050505;
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
+            --accent: #38bdf8;
+            --text-main: #ffffff;
+            --text-dim: #94a3b8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        header {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #1e293b 0%, #050505 100%);
+            padding: 20px;
+        }
+
+        .brand-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: var(--accent);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            max-width: 600px;
+        }
+
+        /* Content Section */
+        .main-content {
+            max-width: 1100px;
+            margin: -100px auto 100px;
+            padding: 0 20px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .video-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        video {
+            width: 100%;
+            aspect-ratio: 16/9;
+            display: block;
+            background: #000;
+        }
+
+        .video-info {
+            padding: 25px;
+        }
+
+        .video-category {
+            font-size: 0.7rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .video-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        /* Greetings Footer */
+        footer {
+            text-align: center;
+            padding: 100px 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-text {
+            font-style: italic;
+            color: var(--text-dim);
+            font-size: 1.2rem;
+        }
+
+        @media (min-width: 768px) {
+            .video-grid { grid-template-columns: repeat(2, 1fr); }
+            .video-card.featured { grid-column: span 2; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand-tag">ISHAN Stream Presents</div>
+        <h1>Engagement Memories</h1>
+        <p class="subtitle">A cinematic journey of love, family, and a beautiful new beginning. Enjoy the Roka and Engagement highlights.</p>
+    </header>
+
+    <main class="main-content">
+        <div class="video-grid">
+            
+            <div class="video-card featured">
+                <video controls preload="none" poster="https://via.placeholder.com/1200x675/111/fff?text=The+Family+Story">
+                    <source src="PASTE_LINK_1_HERE" type="video/mp4">
+                </video>
+                <div class="video-info">
+                    <span class="video-category">Introduction</span>
+                    <h3 class="video-title">Roots & Relations: The Family Montage</h3>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <video controls preload="none">
+                    <source src="PASTE_LINK_2_HERE" type="video/mp4">
+                </video>
+                <div class="video-info">
+                    <span class="video-category">Soulmates</span>
+                    <h3 class="video-title">Eternal Gaze: Cinematic Verse I</h3>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <video controls preload="none">
+                    <source src="PASTE_LINK_3_HERE" type="video/mp4">
+                </video>
+                <div class="video-info">
+                    <span class="video-category">The Ritual</span>
+                    <h3 class="video-title">The Sacred Promise: Roka Ceremony</h3>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <video controls preload="none">
+                    <source src="PASTE_LINK_4_HERE" type="video/mp4">
+                </video>
+                <div class="video-info">
+                    <span class="video-category">Love Story</span>
+                    <h3 class="video-title">Hand in Hand: Cinematic Verse II</h3>
+                </div>
+            </div>
+
+            <div class="video-card featured">
+                <video controls preload="none">
+                    <source src="PASTE_LINK_5_HERE" type="video/mp4">
+                </video>
+                <div class="video-info">
+                    <span class="video-category">The Big Moment</span>
+                    <h3 class="video-title">Sealed with a Ring: The Engagement</h3>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p class="footer-text">"Enjoy the Engagement and Roka memories. <br> May this journey be as beautiful as these moments."</p>
+        <div style="margin-top: 30px; opacity: 0.3; font-size: 0.8rem;">
+            &copy; 2026 ISHAN STREAM. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
